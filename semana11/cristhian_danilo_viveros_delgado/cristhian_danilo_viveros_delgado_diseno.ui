@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>programa_urgencias</class>
+ <widget class="QMainWindow" name="programa_urgencias">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>788</width>
+    <height>579</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Programa Detección De Urgencias</string>
+  </property>
+  <widget class="QWidget" name="WidgetAlineacion">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="deteccion">
+       <attribute name="title">
+        <string>Detección De Urgencia</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="2" column="0">
+         <layout class="QHBoxLayout" name="TablaInformacion">
+          <item>
+           <layout class="QVBoxLayout" name="info_paciente">
+            <item>
+             <widget class="QLabel" name="titulo_info_paciente">
+              <property name="text">
+               <string>Información Paciente</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTableWidget" name="tabla_info_paciente"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="EstadoPaciente">
+            <item>
+             <widget class="QLabel" name="titulo_estado_paciente">
+              <property name="text">
+               <string>Estado del paciente:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTableWidget" name="tabla_estado_paciente"/>
+            </item>
+            <item>
+             <layout class="QFormLayout" name="ClasificacionOpciones">
+              <property name="fieldGrowthPolicy">
+               <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+              </property>
+              <item row="0" column="0">
+               <widget class="QLabel" name="clasificacion_triage">
+                <property name="text">
+                 <string>Clasificación Triage</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="que_desea_hacer">
+                <property name="text">
+                 <string>Que Desea:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <spacer name="espacio_5">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="nada">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QRadioButton" name="imprimir_estado">
+                <property name="text">
+                 <string>Imprimir Estado</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="nada_2">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QRadioButton" name="guardar_en_archivo">
+                <property name="text">
+                 <string>Guardar en archivo de texto</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="0" colspan="2">
+               <spacer name="espacio_6">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLabel" name="numero_triage">
+                <property name="text">
+                 <string>Triage #</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item row="4" column="0">
+         <layout class="QHBoxLayout" name="terminar">
+          <item>
+           <spacer name="espacio_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="boton_terminar">
+            <property name="text">
+             <string>Terminar</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="espacio">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="Titulo">
+          <item>
+           <spacer name="espacio_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="titulo">
+            <property name="text">
+             <string>DETECCION DE URGENCIAS</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="espacio_4">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0">
+         <layout class="QHBoxLayout" name="donde_esta_info">
+          <item>
+           <spacer name="horizontalSpacer_6">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_11">
+            <property name="text">
+             <string>Introducir datos del paciente en la pestaña de Informacion</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_7">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item row="3" column="0">
+         <layout class="QHBoxLayout" name="Espacio"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="informacion_paciente">
+       <attribute name="title">
+        <string>Informacion</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <layout class="QHBoxLayout" name="seleccion_cargar_archivo_2">
+          <item>
+           <spacer name="espacio_10">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="seleccion_cargar_archivo">
+            <property name="text">
+             <string>Cargar Informacion Desde Un Archivo</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="espacio_9">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="cargar_archivo">
+          <item>
+           <widget class="QPushButton" name="boton_cargar_archivo">
+            <property name="text">
+             <string>Cargar Archivo</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="direccion_archivo"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="info_manual">
+          <item>
+           <spacer name="espacio_8">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="seleccion_manual">
+            <property name="text">
+             <string>Introducir Informacion Manualmente</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="espacio_7">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QFormLayout" name="introducir_info">
+          <property name="fieldGrowthPolicy">
+           <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+          </property>
+          <item row="1" column="0">
+           <widget class="QLabel" name="nombre_paciente">
+            <property name="text">
+             <string>Nombre Paciente:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="nombre"/>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="identificacion">
+            <property name="text">
+             <string>Identificacion:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="linea_identificacion"/>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="urgencia">
+            <property name="text">
+             <string>Urgencia(Padecimiento o enfermedad):</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLineEdit" name="linea_urgencia"/>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="edad">
+            <property name="text">
+             <string>Edad:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QLineEdit" name="linea_edad"/>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="sexo">
+            <property name="text">
+             <string>Sexo:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <widget class="QLineEdit" name="linea_sexo"/>
+          </item>
+          <item row="8" column="0" colspan="2">
+           <widget class="QLabel" name="titulo_info_introducida">
+            <property name="minimumSize">
+             <size>
+              <width>744</width>
+              <height>13</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>13</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Informacion Introducida:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="0" colspan="2">
+           <widget class="QListView" name="lista_info"/>
+          </item>
+          <item row="10" column="0" colspan="2">
+           <spacer name="espacio_11">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="11" column="0" colspan="2">
+           <widget class="QPushButton" name="procesar_info">
+            <property name="text">
+             <string>Procesar Información</string>
+            </property>
+           </widget>
+          </item>
+          <item row="13" column="0">
+           <widget class="QLabel" name="label_progreso">
+            <property name="text">
+             <string>Progreso :</string>
+            </property>
+           </widget>
+          </item>
+          <item row="13" column="1">
+           <widget class="QProgressBar" name="barra_progreso_proceso">
+            <property name="value">
+             <number>24</number>
+            </property>
+           </widget>
+          </item>
+          <item row="12" column="0" colspan="2">
+           <widget class="QLabel" name="donde_se_mira_info_procesada">
+            <property name="text">
+             <string>Para Ver El Estado de Urgencia del paciente dirigase a la pestaña anterior luego de que la información sea procesada.</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
